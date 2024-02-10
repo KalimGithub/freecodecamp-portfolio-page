@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&family=Mulish:ital@1&family=Poppins&family=Roboto&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    font-family: 'Raleway', sans-serif;
+}
+#navbar{
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #c8256b;
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+    align-content: center;
+    margin: auto;
+}
+#navbar a{
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    padding: 33px;
+}
+#navbar a:hover{
+    background-color: #45567D;
+    color: #c8256b;
+}
+#welcome-section{
+    height: 100vh;
+    background-color: #212123;
+    color: white;
+    /* display: none; */
+}
+#welcome-section h1{
+    margin: auto;
+    padding-top: 300px;
+    height: 100%;
+    max-width: 900px;
+    font-weight: bold;
+    font-size: 48px;
+    text-align: center;
+}
+span{
+    font-size: 30px;
+    color: #c8256b;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#project-h1{
+    background-color: #45567D;
+    color: white;
+    padding: 30px 0px;
+}
+#projects{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    height: 100vh;
+    color: white;
+}
+#projects-container{
+    background-color: #45567D;
+    padding-bottom: 30px;
+}
+
+#project-h1{
+    text-align: center; 
+    text-decoration: underline;
+    font-size: 36px;
+}
+
+.project{
+    width: 300px;
+    height: 290px;
+    margin: auto;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: #212123;
+    background-color: #303841;
+    text-align: center;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+    display: inline-block;
+}
+.project #image{
+    width: 100%;
+    height: calc(100% - 2.8rem);
+    object-fit: cover;
+}
+.project h2{
+    color: white;
+    font-size: 18px;
+    margin: 5px auto;
+}
+.code{
+    text-align: center;
+    color:#303841;
+    font-size: 16px; 
+    margin: 5px auto;
+    transition: .3s all ease;
+}
+.project:hover .code, h2:hover .code{
+    transform: scale(1.1);
+    color:#c8256b;
+}
+#show-all{
+    background-color: #212123;
+    color: white;
+    margin: auto;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+}
+#show-all:hover{
+    transform: scaleX(1.05);
+    transition:  .3s all ease-in-out;
+    background-color: #c8256b;
+}
+#show-all-div{
+    margin: auto;
+    width: max-content;
+
+}
+
+/* contacts div styles */
+.contacts-div{
+    background-color: #303841;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 1rem;
+    font-family: Raleway, sans-serif;
+    height: 80vh;
+    
+}
+
+#contact-para{
+    font-family:Poppins, sans-serif;
+    font-style: italic;
+    font-size: 18px;
+    margin: 10px;
+}
+#contacts{
+    width: 50%;
+    margin: auto;
+}
+#contact-heading{
+    font-size: 52px;
+    line-height: 1.2;
+}
+
+.contacts-icons{
+    display: flex;
+    gap: 1rem;
+    justify-content: space-around;
+    align-items: center;
+    margin: 30px 0px;
+    font-family: poppins, sans-serif;
+    
+}
+.contacts-div i{
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+}
+.contacts-div span{
+    padding-inline:10px;
+    font-size: 22px;
+    font-weight: 800;
+}
+.contacts-icons a:hover{
+    transform: translateY(10px);
+    transition: transform 0.3s ease-out;
+}
+.footer{
+    display: flex;
+    justify-content: space-around;
+    padding: 30px;
+    background-color: #c8256b;
+    color: white;
+}
+.footer p{
+    font-size: larger;
+}
+.footer a{
+    color: white;
+}
+.footer a:hover{
+    color: #45567D;
+}
+/* media queries for smartphones */
+@media (max-width: 600px) {
+    #navbar{
+        padding: 0rem 1rem;
+        justify-content: center;
+    }
+    #projects {
+        grid-template-columns: repeat(1, 1fr);
+      }
+      .project{
+        width: 70vw;
+        height: auto;
+        margin: 10px auto;
+      }
+      .footer{
+        flex-direction: column;
+        text-align: center;
+      }
+      #contact .container p {
+        margin-bottom: 1.5rem;
+      }
+    .contacts-icons{
+        flex-direction: column;
+    }
+      #contact .container .social>div a {
+        display: block;
+        margin: 1rem 1.5rem;
+      }
+    #show-all-div{
+        margin-top: 10px;
+    }
+}
